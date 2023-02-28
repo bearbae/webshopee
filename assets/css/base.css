@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #EE4D2D ; 
+    --white-color: #fff ; 
+    --black-color: #000 ; 
+    --text-color: #333 ; 
+}
+
+* {
+    box-sizing : inherit ; 
+}
+/* 62.5% <--> 1rem = 10px 
+    100%$ <--> 1rem = 16px 
+*/
+html {
+    font-size: 62.5% ; 
+    line-height: 1.6rem ;
+    font-family : 'Roboto', sans-serif ; 
+    box-sizing : border-box ; 
+}
+
+.grid {
+    width: 1400px ; 
+    max-width: 100% ; 
+    margin: 0 auto ; 
+}
+/* Su dung khi khong muon su dung width 1200px */
+.grid__full-width {
+    width: 100% ;
+}
+/* Nhung the trong class cung nam tren mot hang ngang  */
+.grid__row {
+    display: flex  ; 
+    /* Nhay xuong hang  */
+    flex-wrap : wrap ; 
+}
