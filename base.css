@@ -1,0 +1,178 @@
+:root {
+    --primary-color: #EE4D2D ; 
+    --white-color: #fff ; 
+    --black-color: #000 ; 
+    --text-color: #333 ; 
+    --border-color : #dbdbdb ; 
+    --header-height: 120px ; 
+    --navbar-height: 22px ; 
+    --header-search-height: calc(var(--header-height) - var(--navbar-height)) ; 
+}
+
+* {
+    box-sizing : inherit ; 
+}
+/* 62.5% <--> 1rem = 10px 
+    100%$ <--> 1rem = 16px 
+*/
+html {
+    font-size: 62.5% ; 
+    line-height: 1.6rem ;
+    font-family : 'Roboto', sans-serif ; 
+    box-sizing : border-box ; 
+}
+/*       Resposive     */
+.grid {
+    max-width: 1400px ; 
+    /* max-width: 100% ;  */
+    margin: 0 auto ; 
+    display: block;
+
+}
+/* Su dung khi khong muon su dung width 1200px */
+.grid__full-width {
+    width: 100% ;
+}
+/* Nhung the trong class cung nam tren mot hang ngang  */
+.grid__row {
+    display: flex  ; 
+    flex-wrap: wrap;
+    padding-left:  -5px ;
+    padding-right: -5px ; 
+}
+.grid__column-2{
+    width: 16.6667% ; 
+    
+    padding-left: 5px ;
+    padding-right: 5px ;
+}
+.grid__column-2-5{
+    width: 20%  ; 
+    padding-left: 5px ;
+    padding-right: 5px ;
+}
+.grid__column-10{
+   width: 83.3333% ; 
+    padding-left: 5px ;
+    padding-right: 5px ;
+
+
+    
+}
+/* Animation */
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }    
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+/* Modal  */
+/* .modal {
+    position: fixed ; 
+    top: 0 ; 
+    right: 0 ; 
+    bottom: 0  ;
+    left: 0  ; 
+    display: flex ;
+    animation:  fadeIn linear 0.1s ; 
+}
+
+.modal__overlay {
+    position: absolute ; 
+    width: 100% ; 
+    height: 100% ; 
+    background-color: rgba(0, 0 , 0 ,0.4)  ;
+}
+
+.modal__body {
+    --growth-from : 0.7 ; 
+    --growth-to : 1 ; 
+    background-color: var(--white-color) ; 
+    margin: auto ; 
+    position: relative ; 
+    z-index: 1;
+    border-radius: 5px ; ;
+    animation: growth linear 0.1s ; 
+} */
+
+/* Style button */
+
+.btn {
+    min-width: 124px;
+    min-height: 30px ; 
+    text-decoration: none ;
+    border: none ; 
+    border-radius: 2px ;
+    font-size: 1.4rem ; 
+    padding : 0 12px ; 
+    cursor : pointer ; 
+    color : var(--text-color) ; 
+    display: inline-flex  ; 
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn-normal:hover {
+    background-color:rgba(0, 0 , 0 ,0.1) ; 
+}
+.btn.btn--size-s{
+    height: 30px ; 
+    font-size: 12px ;
+    padding : 0 8px ;
+}
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color) ; 
+  
+}
+
+/* select */
+.select-input {
+    position: relative ; 
+    background-color: var(--white-color);
+    min-width: 200px ; 
+    height : 34px ; 
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px ;
+    padding: 0 12px  ;
+}
+
+.select-input__label{
+    font-size: 1.4rem;
+}
+.select-input__icon{
+    font-size: 1.3rem ;
+}
+
+.select-input-list{
+    position: absolute;
+    left: 0;
+    right: 0 ; 
+    top : 73% ; 
+    background-color: var(--white-color) ;
+    border-radius: 2px ;
+    box-shadow:  0 1px 2px #e0e0e0;
+    padding: 8px 16px ; 
+    display: none;
+
+}
+.select-input:hover .select-input-list{
+    display: block ;
+}
+.select-input-item{
+    font-size: 1.4rem;
+    list-style: none;
+    padding : 8px 0 ; 
+}
+.select-input-link{
+    text-decoration: none;
+    color :var(--text-color) ; 
+    display: block;
+}
+.select-input-link:hover {
+    color : var(--primary-color) ; 
+}
